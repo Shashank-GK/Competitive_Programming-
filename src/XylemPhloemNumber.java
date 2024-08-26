@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class XylemNumber {
+public class XylemPhloemNumber {
 
-    public static void checkXyltmNumber(int num) {
+    public static void checkXylemPhloemNumber(int num) {
         int count = 0;
         int smallerNum = 0;
         int largerNum = 0;
@@ -25,7 +25,7 @@ public class XylemNumber {
         if (sumOfFirstLast == meanOfMidDigit) {
             System.out.println("It is a Xylem number");
         } else {
-            System.out.println("It is not a Xylem number");
+            System.out.println("It is not a Phloem number");
         }
     }
 
@@ -33,6 +33,6 @@ public class XylemNumber {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number to check it is a Xylem number or not: ");
         int num = sc.nextInt();
-        checkXyltmNumber(num);
+        checkXylemPhloemNumber(num);
     }
 }
