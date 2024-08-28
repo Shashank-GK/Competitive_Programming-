@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/*
+Certainly! Let’s talk about perfect numbers. A perfect number is a positive integer that equals the
+sum of its proper divisors (excluding the number itself).
+For example, the smallest perfect number is 6, which can be expressed as:
+                                              => 6=1+2+3
+Here, the divisors of 6 are 1, 2, and 3, and their sum indeed equals 6.
+ */
 public class FirstN_PerfectNum {
     public static int getSumOfPerfectNUm(int num) {
         int sum = 0;

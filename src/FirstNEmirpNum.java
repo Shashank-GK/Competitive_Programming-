@@ -27,7 +27,7 @@ public class FirstNEmirpNum {
     }
 
     public static void printEmirpNUm(int n) {
-        for (int i = 0; i <= 100; i++) {
+        for (int i = 0; i <= n; i++) {
             if (checkPrimeNUmber(i) && checkPrimeNUmber(reverseNumber(i)) && i != reverseNumber(i)) {
                 System.out.println(i);
             }
