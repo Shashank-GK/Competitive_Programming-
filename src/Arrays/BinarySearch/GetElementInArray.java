@@ -11,13 +11,13 @@ public class GetElementInArray {
         if (arr[mid] == target) {
             return mid;
         } else if (arr[mid] < target) {
-            for (int i = mid; i < arr.length; i++) {
+            for (int i = mid + 1; i < arr.length; i++) {
                 if (arr[i] == target) {
                     indexOfTarget = i;
                 }
             }
         } else {
-            for (int i = mid; i > 0; i--) {
+            for (int i = mid - 1; i > 0; i--) {
                 if (arr[i] == target) {
                     indexOfTarget = i;
                 }
