@@ -7,25 +7,27 @@ public class SearchPositionOfElement {
     public static int searchIndexOfElement(int[] arr, int targetElement) {
         int start = 0;
         int end = arr.length - 1;
+        int mid = 0;
+        if (targetElement == arr[mid]) {
+            return mid;
+        }
         if (arr[start] < arr[end]) { // Ascending order
             while (start <= end) {
-                int mid = start + ((end - start) / 2); // mid=start+end/2; don't use this because it may cause overflow if start and end are large integers.
+                mid = start + ((end - start) / 2); // mid=start+end/2; don't use this because it may cause overflow if start and end are large integers.
                 if (targetElement < arr[mid]) {
                     end = mid - 1; // Ascending order
-                } else if (targetElement > arr[mid]) {
+                }
+                if (targetElement > arr[mid]) {
                     start = mid + 1; // Ascending order
-                } else if (targetElement == arr[mid]) {
-                    return mid;
                 }
             }
         } else { // Descending order - OrderAgnostic Binary Search
-            int mid = start + ((end - start) / 2);
+            mid = start + ((end - start) / 2);
             if (targetElement < arr[mid]) {
                 start = mid - 1; // Descending order
-            } else if (targetElement > arr[mid]) {
+            }
+            if (targetElement > arr[mid]) {
                 end = mid + 1; // Descending order
-            } else if (targetElement == arr[mid]) {
-                return mid;
             }
         }
         return -1;
