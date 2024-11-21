@@ -6,7 +6,7 @@ public class MaxInRange {
 
     public static int maxElementInRange(int[] arr, int start, int end) {
         int maxValue = arr[start];
-        for (int i = start; i < arr.length; i++) {
+        for (int i = start; i < end; i++) {
             if (arr[i] > maxValue) {
                 maxValue = arr[i];
             }
@@ -23,8 +23,9 @@ public class MaxInRange {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println("Enter the range: ");
+        System.out.println("Enter the Starting range: ");
         int start = sc.nextInt();
+        System.out.println("Enter the end range: ");
         int end = sc.nextInt();
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + "\t");
