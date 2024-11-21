@@ -2,28 +2,32 @@ package Arrays.BinarySearch;
 
 import java.util.Scanner;
 
-//Considering the sorted array in ascending order
+// Considering the sorted array in ascending order
 public class GetElementInArray {
 
     public static int getTargetElement(int[] arr, int target) {
-        int mid = arr.length / 2;
-        int indexOfTarget = 0;
-        if (arr[mid] == target) {
-            return mid;
-        } else if (arr[mid] < target) {
-            for (int i = mid + 1; i < arr.length; i++) {
-                if (arr[i] == target) {
-                    indexOfTarget = i;
-                }
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            // Check if the target is present at mid
+            if (arr[mid] == target) {
+                return mid;
             }
-        } else {
-            for (int i = mid - 1; i > 0; i--) {
-                if (arr[i] == target) {
-                    indexOfTarget = i;
-                }
+
+            // If target is greater, ignore the left half
+            if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                // If target is smaller, ignore the right half
+                right = mid - 1;
             }
         }
-        return indexOfTarget;
+
+        // Target is not present in the array
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -38,8 +42,14 @@ public class GetElementInArray {
         System.out.println("Enter the element to be searched: ");
         int target = sc.nextInt();
         int indexOfTarget = getTargetElement(arr, target);
-        System.out.println("The index of the target element is: " + indexOfTarget);
-        System.out.println("The target element " + arr[indexOfTarget] + " is at position " + (indexOfTarget + 1));
+
+        if (indexOfTarget != -1) {
+            System.out.println("The index of the target element is: " + indexOfTarget);
+            System.out.println("The target element " + arr[indexOfTarget] + " is at position " + (indexOfTarget + 1));
+        } else {
+            System.out.println("The target element is not present in the array.");
+        }
+
         sc.close();
     }
 }

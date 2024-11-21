@@ -5,9 +5,9 @@ public class digitCount {
     public static int countOfDigits(int num, long digit) {
         int rem = 0;
         int count = 0;
-        while ( num != 0 ) {
+        while (num != 0) {
             rem = num % 10;
-            if ( rem == digit ) {
+            if (rem == digit) {
                 count++;
             }
             num = num / 10;
