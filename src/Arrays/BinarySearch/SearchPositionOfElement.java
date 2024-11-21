@@ -10,9 +10,11 @@ public class SearchPositionOfElement {
         while (start <= end) {
             int mid = start + ((end - start) / 2); // mid=start+end/2; don't use this because it may cause overflow if start and end are large integers.
             if (targetElement < arr[mid]) {
-                end = mid - 1;
+                end = mid - 1; // Ascending order
+                // end=mid+1; // Descending order
             } else if (targetElement > arr[mid]) {
-                start = mid + 1;
+                start = mid + 1; // Ascending order
+                // start=mid-1; // Descending order
             } else if (targetElement == arr[mid]) {
                 return mid;
             }
