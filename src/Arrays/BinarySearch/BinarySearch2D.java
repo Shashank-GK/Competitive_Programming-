@@ -25,7 +25,7 @@ public class BinarySearch2D {
         int row = sc.nextInt();
         System.out.println("Enter the number of columns: ");
         int col = sc.nextInt();
-        System.out.println("Enter the array elements: where row: " + row + " and col: " + col);
+        System.out.println("Enter the array elements: ");
         int[][] arr = new int[row][col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
