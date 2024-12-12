@@ -10,7 +10,7 @@ public class BinarySearch2D {
         int i = sc.nextInt();
         int j = sc.nextInt();
         int[][] matrix = new int[i][j];
-        System.out.println("Enter the elements of the matrix: ");
+        System.out.println("Enter the elements of the matrix in sorted way: ");
         for (int k = 0; k < i; k++) {
             for (int l = 0; l < j; l++) {
                 matrix[k][l] = sc.nextInt();
