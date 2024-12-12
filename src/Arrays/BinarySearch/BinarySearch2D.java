@@ -1,41 +1,41 @@
 package Arrays.BinarySearch;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinarySearch2D {
-
-    static boolean searchTarget(int[][] arr, int row, int col, int target) {
-        int targetRow = 0;
-        int targetCol = 0;
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (arr[i][j] == target) {
-                    System.out.println("Target found at row: " + i + 1 + ", col: " + j + 1);
-                    return true;
-                }
-            }
-        }
-        System.out.println("Target not found");
-        return false;
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of rows: ");
-        int row = sc.nextInt();
-        System.out.println("Enter the number of columns: ");
-        int col = sc.nextInt();
-        System.out.println("Enter the array elements: ");
-        int[][] arr = new int[row][col];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                arr[i][j] = sc.nextInt();
+        System.out.println("Enter the number of rows and columns: ");
+        int i = sc.nextInt();
+        int j = sc.nextInt();
+        int[][] matrix = new int[i][j];
+        System.out.println("Enter the elements of the matrix: ");
+        for (int k = 0; k < i; k++) {
+            for (int l = 0; l < j; l++) {
+                matrix[k][l] = sc.nextInt();
             }
         }
-        System.out.println("Enter the element to find: ");
-        int target = sc.nextInt();
-        if (!searchTarget(arr, row, col, target)) {
-            System.out.println("The element does not exist in the array.");
+        System.out.println("Enter the target element: ");
+        int targetElement = sc.nextInt();
+
+        System.out.println(Arrays.toString(searchElement(matrix, targetElement)));
+    }
+
+    public static int[] searchElement(int[][] matrix, int target) {
+        int row = 0;
+        int column = matrix.length - 1;
+
+        while (row < matrix.length && column >= 0) {
+            if (matrix[row][column] == target) {
+                return new int[]{row, column};
+            }
+            if (matrix[row][column] > target) {
+                column--;
+            } else {
+                row++;
+            }
         }
+        return new int[]{-1, -1};
     }
 }
