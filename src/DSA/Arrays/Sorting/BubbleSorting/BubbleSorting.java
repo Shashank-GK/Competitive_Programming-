@@ -1,5 +1,6 @@
 package DSA.Arrays.Sorting.BubbleSorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BubbleSorting {
@@ -31,6 +32,8 @@ public class BubbleSorting {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        System.out.println("Array before sorting: " + Arrays.toString(arr));
+        System.out.println("Array after sorting: " + Arrays.toString(bubbleSorting(arr)));
     }
 
 
