@@ -12,7 +12,7 @@ public class BubbleSorting {
 
             // for each step, max item will come at the last respective index
             for (int j = 0; j < n - 1; j++) {
-                swapped == false;
+                boolean swapped = false;
                 // swap if the item is greater than the next item
                 int temp = 0;
                 if (arr[j] > arr[j + 1]) {
@@ -40,6 +40,4 @@ public class BubbleSorting {
         System.out.println("Array before sorting: " + Arrays.toString(arr));
         System.out.println("Array after sorting: " + Arrays.toString(bubbleSorting(arr)));
     }
-
-
 }
