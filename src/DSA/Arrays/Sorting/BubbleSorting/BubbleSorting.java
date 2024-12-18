@@ -9,14 +9,19 @@ public class BubbleSorting {
         int n = arr.length;
         // run the steps n-1 times
         for (int i = 0; i < n; i++) {
+
             // for each step, max item will come at the last respective index
             for (int j = 0; j < n - 1; j++) {
+                swapped == false;
                 // swap if the item is greater than the next item
                 int temp = 0;
                 if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                }
+                if (swapped == false) {
+                    break;
                 }
             }
         }
