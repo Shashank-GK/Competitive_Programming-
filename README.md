@@ -58,4 +58,4 @@ Feel free to reach out to me:
 - GitHub: [Shashank-GK](https://github.com/Shashank-GK)
 
 ## Thank YOU
-- ﻿#DSAwithKunal [#DSAwithKunal)
+- [#DSAwithKunal](#DSAwithKunal)
