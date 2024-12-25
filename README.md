@@ -46,7 +46,7 @@ Competitive_Programming-
 ## Current Progress
 - **Sorting**: Completed
 - **Searching**: Completed
-- **Recursion**: In Progress
+- **Recursion**: Completed
 
 ## Contributions
 Contributions are welcome! Feel free to fork the repository, create issues, or submit pull requests.
